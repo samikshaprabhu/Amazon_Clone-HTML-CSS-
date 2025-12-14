@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="all.html">Amazon</a></div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for products">
+            <button>Search</button>
+        </div>
+        <div class="nav-links">
+            <div class="nav-item">Hello, Sign in</div>
+            <div class="nav-item">Returns</div>
+            <div class="nav-item">Orders</div>
+            <div class="nav-item cart">Cart</div>
+        </div>
+    </nav>
+
+    <nav class="sub-nav">
+        <a href="all.html">All</a>
+        <a href="mobiles.html">Mobiles</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="electronics.html">Electronics</a>
+        <a href="home.html">Home</a>
+        <a href="appliances.html">Appliances</a>
+    </nav>
+
+  
+
+    <div class="products">
+        <div class="card">
+            <img src="images/ele1.jpg" alt="Electronics 1">
+            <p>Alexa</p>
+            <p class="price">$59</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/ele2.jpg" alt="Electronics 2">
+            <p>Devices</p>
+            <p class="price">$399</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/ele3.jpg" alt="Electronics 3">
+            <p>Bluetooth</p>
+            <p class="price">$149</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/ele4.jpg" alt="Electronics 4">
+            <p>office electronics</p>
+            <p class="price">$149</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="card">
+            <img src="images/ele5.png" alt="Electronics 5">
+            <p>Galaxy Tab</p>
+            <p class="price">$59</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/ele6.jpg" alt="Electronics 6">
+            <p>Bluetooth</p>
+            <p class="price">$399</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/ele7.jpg" alt="Electronics 7">
+            <p>Headphone</p>
+            <p class="price">$149</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/ele8.jpg" alt="Electronics 8">
+            <p>Alexa</p>
+            <p class="price">$149</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 MyStore. All rights reserved.
+    </footer>
+
+    <script>
+        const subNavLinks = document.querySelectorAll('.sub-nav a');
+        const currentPage = window.location.pathname.split("/").pop();
+        subNavLinks.forEach(link => {
+            if(link.getAttribute('href') === currentPage) link.classList.add('active');
+        });
+    </script>
+
+</body>
+</html>

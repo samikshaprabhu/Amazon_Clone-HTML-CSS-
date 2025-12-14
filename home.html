@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="all.html">Amazon</a></div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for products">
+            <button>Search</button>
+        </div>
+        <div class="nav-links">
+            <div class="nav-item">Hello, Sign in</div>
+            <div class="nav-item">Returns</div>
+            <div class="nav-item">Orders</div>
+            <div class="nav-item cart">Cart</div>
+        </div>
+    </nav>
+
+    <nav class="sub-nav">
+        <a href="all.html">All</a>
+        <a href="mobiles.html">Mobiles</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="electronics.html">Electronics</a>
+        <a href="home.html">Home</a>
+        <a href="appliances.html">Appliances</a>
+    </nav>
+
+   
+
+    <div class="products">
+        <div class="card">
+            <img src="images/home1.jpg" alt="Home 1">
+            <p>Metal Peacock</p>
+            <p class="price">$99</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/home2.jpg" alt="Home 2">
+            <p>Artwork</p>
+            <p class="price">$79</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/home3.jpg" alt="Home 3">
+            <p>Decor Item</p>
+            <p class="price">$39</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/home4.jpg" alt="Home 4">
+            <p>Craft</p>
+            <p class="price">$99</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="card">
+            <img src="images/home5.jpg" alt="Home 5">
+            <p>Metal Peacock</p>
+            <p class="price">$99</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/home6.jpg" alt="Home 6">
+            <p>Rajastani Piece</p>
+            <p class="price">$79</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/home7.jpg" alt="Home 7">
+            <p>lantern</p>
+            <p class="price">$39</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="images/home8.jpg" alt="Home 8">
+            <p>Watch</p>
+            <p class="price">$99</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 MyStore. All rights reserved.
+    </footer>
+
+    <script>
+        const subNavLinks = document.querySelectorAll('.sub-nav a');
+        const currentPage = window.location.pathname.split("/").pop();
+        subNavLinks.forEach(link => {
+            if(link.getAttribute('href') === currentPage) link.classList.add('active');
+        });
+    </script>
+
+</body>
+</html>

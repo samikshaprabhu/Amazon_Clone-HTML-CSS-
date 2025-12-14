@@ -1,0 +1,394 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #131921;
+    color: white;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo span {
+    color: #ff9900;
+}
+
+.login-btn {
+    display: block;          
+    width: 100%;             
+    padding: 12px;
+    background-color: #f0c14b;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;      
+    transition: background 0.3s ease;
+    margin: 0 auto;         
+}
+
+
+.search-box {
+    flex: 1;
+    display: flex;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 2px 0 0 2px;
+}
+
+.search-box button {
+    padding: 8px 15px;
+    background: #febd69;
+    border: none;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #f3a847;
+}
+
+
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    gap: 30px;                /* Space between items */
+    background-color: #232f3e; /* Amazon nav bar color */
+    padding: 10px 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Individual nav items */
+.nav-item {
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Bold part styling */
+.nav-item b {
+    font-size: 14px;
+}
+
+/* Hover effect */
+.nav-item:hover {
+    color: #f0c14b; /* Highlight color on hover */
+}
+
+/* Cart special styling */
+.nav-item.cart {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 5px;
+}
+
+.nav-item.cart:hover {
+    color: #f0c14b;
+}
+
+.sub-nav {
+    display: flex;
+    background-color: #37475a; /* Dark Amazon nav background */
+    padding: 8px 20px;
+    gap: 15px;                 /* Space between links */
+    font-family: Arial, sans-serif;
+    overflow-x: auto;          /* Scroll on small screens */
+}
+
+.sub-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+    white-space: nowrap;       /* Keep text in single line */
+}
+
+/* Hover effect */
+.sub-nav a:hover {
+    background-color: #f0c14b;
+    color: #111;
+}
+
+/* Make first item “All” slightly bigger */
+.sub-nav a:first-child {
+    font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 400px;
+    background-image: url('images/Amazon_blog_banner_25_Website_desktop_1200x350px.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4); /* Dark overlay for better text readability */
+    border-radius: 10px;
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+
+/* PRODUCTS GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: #f3f3f3;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin: 10px 0;
+}
+
+.card p {
+    color: #000;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* PRODUCT DETAILS PAGE */
+.product-details {
+    display: flex;
+    gap: 50px;
+    padding: 50px;
+    background: #f3f3f3;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-image img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-info {
+    max-width: 500px;
+}
+
+.product-info h2 {
+    font-size: 28px;
+    color: #131921;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: #B12704;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.add-cart-btn {
+    background: #f0c14b;
+    border: 1px solid #a88734;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.add-cart-btn:hover {
+    background: #e2b33c;
+}
+
+/* LOGIN PAGE */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f3f3f3;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    width: 350px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #131921;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #f0c14b;
+    border: 1px solid #a88734;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.login-box p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.login-box a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background: #131921;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* SUB-NAVIGATION BAR */
+.sub-nav {
+    display: flex;
+    background-color: #37475a; /* Dark Amazon nav background */
+    padding: 8px 20px;
+    gap: 15px;                 /* Space between links */
+    font-family: Arial, sans-serif;
+    overflow-x: auto;          /* Scroll on small screens */
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.sub-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+    white-space: nowrap;       /* Keep text in single line */
+}
+
+/* Hover effect */
+.sub-nav a:hover {
+    background-color: #f0c14b;
+    color: #111;
+    transform: scale(1.05);
+}
+
+/* Make first item “All” slightly bolder */
+.sub-nav a:first-child {
+    font-weight: bold;
+}
+
+/* Active page styling */
+.sub-nav a.active {
+    background-color: #f0c14b;
+    color: #111;
+}
